@@ -1,0 +1,41 @@
+{
+  "name": "@cex-io/cexio-prime-liquidity",
+  "version": "0.2.1",
+  "description": "The official Node.js client for CEX.IO Prime Liquidity API",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cex-io-exchange/cexio-prime-liquidity.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cex-io-exchange/cexio-prime-liquidity/issues"
+  },
+  "homepage": "https://github.com/cex-io-exchange/cexio-prime-liquidity",
+  "engines": {
+    "node": ">=8"
+  },
+  "keywords": [
+    "API",
+    "exchange",
+    "real-time",
+    "trading",
+    "cryptoexchange",
+    "crypto",
+    "bitcoin",
+    "ethereum",
+    "trade"
+  ],
+  "author": "cex.io",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.9",
+    "ws": "^7.3.0"
+  },
+  "devDependencies": {
+    "log4js": "^6.3.0",
+    "standard": "^14.3.4"
+  }
+}
