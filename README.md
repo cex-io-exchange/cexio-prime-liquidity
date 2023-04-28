@@ -11,18 +11,18 @@ The official Node.js client for CEX.IO Prime Liquidity API (https://docs.prime.c
 ## Installation
 
 ```bash
-npm install cexio-prime-liquidity
+npm install @cex-io/cexio-prime-liquidity
 ```
 
 ## Rest client
 
 ```js
-const { RestClient } = require('cexio-prime-liquidity')
+const { RestClient } = require('@cex-io/cexio-prime-liquidity')
 const defaultClient = new RestClient()
 const authenticatedClient = new RestClient(apiKey, apiSecret, options)
 ```
 
-Arguments for RestClient are optional. For private actions you need to obtain apiKey + apiSecret pair from your manager.
+Arguments for RestClient are optional. For private actions you need to obtain apiKey and apiSecret pair from your manager.
 
 - `apiKey` _string_ - Api key for specific account.
 - `apiSecret` _string_ - Api secret for specific account.
@@ -47,7 +47,7 @@ If some error was occured then method rejects with status code and error descrip
 For more details check [api refference](https://docs.prime.cex.io).
 
 ```js
-const { RestClient } = require('cexio-prime-liquidity')
+const { RestClient } = require('@cex-io/cexio-prime-liquidity')
 
 const client = new RestClient()
 
@@ -66,7 +66,7 @@ client.callPublic('get_demo_order_book')
 To make private api calls use `async callPrivate(action, params)`. It's similar to public method but requires `apiKey` and `apiSecret` arguments to client initialization. Each private request is signed with `HMAC sha256` so if key is incorrect or signature is wrong client will return rejected promise with error like this `{ error: 'Authorization Failed', statusCode: 401 }`
 
 ```js
-const { RestClient } = require('cexio-prime-liquidity')
+const { RestClient } = require('@cex-io/cexio-prime-liquidity')
 
 const key = '_account_api_key_'
 const secret = '_account_api_secret_'
@@ -91,7 +91,7 @@ Success response example:
 ## WebSocket client
 
 ```js
-const { WebsocketClient } = require('cexio-prime-liquidity')
+const { WebsocketClient } = require('@cex-io/cexio-prime-liquidity')
 const ws = new WebsocketClient(apiKey, apiSecret, options)
 ```
 
@@ -114,7 +114,7 @@ To send request to the server you need to connect and auth first. Everything is 
 If some error was occured then method rejects with status code and error description.
 
 ```js
-  const { WebsocketClient } = require('cexio-prime-liquidity')
+  const { WebsocketClient } = require('@cex-io/cexio-prime-liquidity')
   const ws = new WebsocketClient(apiKey, apiSecret, options)
 
   await ws.connect() // connect and auth on the server
@@ -129,7 +129,7 @@ If some error was occured then method rejects with status code and error descrip
 The WebsocketClient allows you to receive updates. At the now available two types of updates `account_update` and `executionReport`. You can get more details about them in [documentation](https://docs.prime.cex.io/#websocket-account-events).
 
 ```js
-const { WebsocketClient } = require('cexio-prime-liquidity')
+const { WebsocketClient } = require('@cex-io/cexio-prime-liquidity')
 const ws = new WebsocketClient(apiKey, apiSecret)
 
 ws.connect()
