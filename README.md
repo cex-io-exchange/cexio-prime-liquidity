@@ -22,7 +22,7 @@ const defaultClient = new RestClient()
 const authenticatedClient = new RestClient(apiKey, apiSecret, options)
 ```
 
-Arguments for RestClient are optional. For private actions you need to obtain apiKey and apiSecret pair from your manager.
+Arguments for RestClient are optional. For private actions you need to obtain apiKey and apiSecret pair from UI terminal.
 
 - `apiKey` _string_ - Api key for specific account.
 - `apiSecret` _string_ - Api secret for specific account.
@@ -95,7 +95,7 @@ const { WebsocketClient } = require('@cex-io/cexio-prime-liquidity')
 const ws = new WebsocketClient(apiKey, apiSecret, options)
 ```
 
-To init the WebsocketClient you must pass `apiKey` and `apiSecret` arguments. You can obtain them from your manager.
+To init the WebsocketClient you must pass `apiKey` and `apiSecret` arguments. You can obtain them from UI terminal.
 
 - `apiKey` _string_ - Api key for specific account.
 - `apiSecret` _string_ - Api secret for specific account.
